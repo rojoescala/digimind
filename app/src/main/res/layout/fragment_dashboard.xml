@@ -5,109 +5,180 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/text_dashboard"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_height="match_parent">
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:src="@drawable/logobrain"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:textAlignment="center"
-        android:text="What do you want to remember to do?"
-        android:textColor="@color/colorPreguntas"/>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+                android:src="@drawable/logobrain"/>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:textAlignment="center"
-        android:text="When do you want to do it?"
-        android:textColor="@color/colorPreguntas"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="What do you want to remember to do?"
+                android:textColor="@color/colorAccent"
+                android:textSize="16sp"/>
 
-    <CheckedTextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="Monday"/>
+            <EditText
+                android:id="@+id/et_task"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Take my pill"/>
 
-    <CheckedTextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="Monday"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="When do you want to do it?"
+                android:textColor="@color/colorAccent"
+                android:textSize="16sp"/>
 
-    <CheckedTextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="Tuesday"/>
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
 
-    <CheckedTextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="Wednesday"/>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
 
-    <CheckedTextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="Thursday"/>
+                    <TextView
+                        android:text="Monday"
+                        android:textSize="16sp"/>
 
-    <CheckedTextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="Friday"/>
+                    <CheckBox
+                        android:id="@+id/checkMonday"
+                        android:layout_marginLeft="50dp"/>
 
-    <CheckedTextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="Saturday"/>
+                </TableRow>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:textAlignment="center"
-        android:text="At what time?"
-        android:textColor="@color/colorPreguntas"/>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:text="Tuesday"
+                        android:textSize="16sp"/>
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/nav_view"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_marginStart="0dp"
-        android:layout_marginEnd="0dp"
-        android:background="?android:attr/windowBackground"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:menu="@menu/bottom_nav_menu" />
+                    <CheckBox
+                        android:id="@+id/checkTuesday"
+                        android:layout_marginLeft="50dp"/>
 
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        android:text="Wednesday"
+                        android:textSize="16sp"/>
+
+                    <CheckBox
+                        android:id="@+id/checkWednesday"
+                        android:layout_marginLeft="50dp"/>
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        android:text="Thursday"
+                        android:textSize="16sp"/>
+
+                    <CheckBox
+                        android:id="@+id/checkThursday"
+                        android:layout_marginLeft="50dp"/>
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        android:text="Friday"
+                        android:textSize="16sp"/>
+
+                    <CheckBox
+                        android:id="@+id/checkFriday"
+                        android:layout_marginLeft="50dp"/>
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        android:text="Saturday"
+                        android:textSize="16sp"/>
+
+                    <CheckBox
+                        android:id="@+id/checkSatuday"
+                        android:layout_marginLeft="50dp"/>
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        android:text="Sunday"
+                        android:textSize="16sp"/>
+
+                    <CheckBox
+                        android:id="@+id/checkSunday"
+                        android:layout_marginLeft="50dp"/>
+
+                </TableRow>
+
+
+            </TableLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="At what time?"
+                android:textColor="@color/colorAccent"
+                android:textSize="16sp"/>
+
+            <Button
+                android:id="@+id/btn_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Set time"
+                android:textAllCaps="false"
+                android:textSize="16sp"
+                android:textColor="@color/gray"
+                android:background="?android:attr/selectableItemBackground"/>
+
+            <Button
+                android:id="@+id/btn_save"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/colorAccent"
+                android:paddingHorizontal="50dp"
+                android:layout_gravity="center"
+                android:textColor="@color/white"
+                android:text="DONE"
+                />
+
+        </LinearLayout>
+
+    </ScrollView>
 
 </LinearLayout>
